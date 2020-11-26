@@ -1,0 +1,14 @@
+<hr/>
+<div class="container">
+  <div class="row">
+    <h1>challenge3 works!</h1>
+
+    <button class="btn btn-primary" (click)="changeButtonStatus()" [innerHTML]="btnDisplayText"></button>
+    <p *ngIf="showContent">secretPassword = Tuna</p>
+
+    <div *ngFor="let logItem of log; let i= index" [ngStyle]="{backgroundColor : logItem>= 5 ? 'blue': 'transparent'}"
+         [ngClass]="{upper5: logItem >= 5}"
+    >{{logItem }} and the index is {{i}}</div>
+
+  </div>
+</div>
